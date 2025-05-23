@@ -3,13 +3,13 @@ package com.desafio.ngbilling.dto;
 public class ContaDTO {
 	
 	private Integer numero_conta;
-	private Double saldo;
+	private float saldo;
 	
 	
 	public ContaDTO() {
 	}
 
-	public ContaDTO(Integer numero_conta, Double saldo) {
+	public ContaDTO(Integer numero_conta, float saldo) {
 		this.numero_conta = numero_conta;
 		this.saldo = saldo;
 	}
@@ -22,11 +22,11 @@ public class ContaDTO {
 		this.numero_conta = numero_conta;
 	}
 	
-	public Double getSaldo() {
+	public float getSaldo() {
 		return saldo;
 	}
 	
-	public void setSaldo(Double saldo) {
+	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
 

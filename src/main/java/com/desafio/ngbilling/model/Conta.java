@@ -21,17 +21,17 @@ public class Conta {
 	private Integer numero_conta;
 	
 	@Column(nullable = false)
-	private Double saldo;
-
-	public Conta(UUID id, Integer numero_conta, Double saldo) {
-
-		this.id = id;
-		this.numero_conta = numero_conta;
-		this.saldo = saldo;
-	}
-
+	private float saldo;
+	
+	
 	public Conta() {
 
+	}
+
+	public Conta(Integer numero_conta, float saldo) {
+
+		this.numero_conta = numero_conta;
+		this.saldo = saldo;
 	}
 
 	public UUID getId() {
@@ -50,11 +50,11 @@ public class Conta {
 		this.numero_conta = numero_conta;
 	}
 
-	public Double getSaldo() {
+	public float getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(Double saldo) {
+	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
 
