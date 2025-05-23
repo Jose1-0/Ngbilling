@@ -18,7 +18,7 @@ public class Conta {
 	private UUID id;
 	
 	@Column(name = "numero_conta", nullable = false, unique = true)
-	private Integer numero_conta;
+	private Integer numeroConta;
 	
 	@Column(nullable = false)
 	private float saldo;
@@ -28,9 +28,9 @@ public class Conta {
 
 	}
 
-	public Conta(Integer numero_conta, float saldo) {
+	public Conta(Integer numeroConta, float saldo) {
 
-		this.numero_conta = numero_conta;
+		this.numeroConta = numeroConta;
 		this.saldo = saldo;
 	}
 
@@ -42,12 +42,12 @@ public class Conta {
 		this.id = id;
 	}
 
-	public Integer getNumero_conta() {
-		return numero_conta;
+	public Integer getNumeroConta() {
+		return numeroConta;
 	}
 
-	public void setNumero_conta(Integer numero_conta) {
-		this.numero_conta = numero_conta;
+	public void setNumeroConta(Integer numeroConta) {
+		this.numeroConta = numeroConta;
 	}
 
 	public float getSaldo() {
@@ -60,7 +60,7 @@ public class Conta {
 
 	@Override
 	public String toString() {
-		return "Conta [id=" + id + ", numero_conta=" + numero_conta + ", saldo=" + saldo + "]";
+		return "Conta [id=" + id + ", numeroConta=" + numeroConta + ", saldo=" + saldo + "]";
 	}
 	
 	

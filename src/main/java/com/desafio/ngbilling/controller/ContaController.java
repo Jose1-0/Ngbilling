@@ -1,7 +1,5 @@
 package com.desafio.ngbilling.controller;
 
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +24,7 @@ public class ContaController {
 		Conta conta = new Conta(contaDTO.getNumero_conta(), contaDTO.getSaldo());
 		Conta novaConta = contaService.criarConta(conta);
 		
-		return ResponseEntity.status(201).body(new ContaDTO(novaConta.getNumero_conta(), novaConta.getSaldo()));
+		return ResponseEntity.status(201).body(new ContaDTO(novaConta.getNumeroConta(), novaConta.getSaldo()));
 		
 	}
 

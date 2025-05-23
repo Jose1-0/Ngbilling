@@ -2,24 +2,24 @@ package com.desafio.ngbilling.dto;
 
 public class ContaDTO {
 	
-	private Integer numero_conta;
+	private Integer numeroConta;
 	private float saldo;
 	
 	
 	public ContaDTO() {
 	}
 
-	public ContaDTO(Integer numero_conta, float saldo) {
-		this.numero_conta = numero_conta;
+	public ContaDTO(Integer numeroConta, float saldo) {
+		this.numeroConta = numeroConta;
 		this.saldo = saldo;
 	}
 	
 	public Integer getNumero_conta() {
-		return numero_conta;
+		return numeroConta;
 	}
 	
 	public void setNumero_conta(Integer numero_conta) {
-		this.numero_conta = numero_conta;
+		this.numeroConta = numero_conta;
 	}
 	
 	public float getSaldo() {
@@ -32,7 +32,7 @@ public class ContaDTO {
 
 	@Override
 	public String toString() {
-		return "ContaDTO [numero_conta=" + numero_conta + ", saldo=" + saldo + "]";
+		return "ContaDTO [numero_conta=" + numeroConta + ", saldo=" + saldo + "]";
 	}
 	
 	
