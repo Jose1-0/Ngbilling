@@ -18,8 +18,8 @@ public class ContaDTO {
 		return numeroConta;
 	}
 	
-	public void setNumero_conta(Integer numero_conta) {
-		this.numeroConta = numero_conta;
+	public void setNumero_conta(Integer numeroConta) {
+		this.numeroConta = numeroConta;
 	}
 	
 	public float getSaldo() {

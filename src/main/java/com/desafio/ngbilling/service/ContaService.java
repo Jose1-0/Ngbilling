@@ -29,4 +29,9 @@ public class ContaService {
 
 		return contaRepository.save(conta);
 	}
+	
+	public Conta buscarConta(Integer numeroConta) {
+	    return contaRepository.findByNumeroConta(numeroConta)
+	            .orElseThrow(() -> new ContaExeption("Conta não encontrada com o número. Verifique o numero de conta digitao"));
+	}
 }
