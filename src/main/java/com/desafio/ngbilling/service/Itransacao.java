@@ -1,4 +1,4 @@
-package com.desafio.ngbilling.service.impl;
+package com.desafio.ngbilling.service;
 
 import com.desafio.ngbilling.model.Conta;
 
