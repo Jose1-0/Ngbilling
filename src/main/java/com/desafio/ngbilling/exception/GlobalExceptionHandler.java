@@ -18,7 +18,6 @@ public class GlobalExceptionHandler {
 
         String msg = ex.getMessage();
 
-        // Decide o status com base na mensagem ou outro critério
         HttpStatus status;
 
         if (msg.contains("não encontrada")) {
@@ -31,6 +30,6 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(new ErrorDTO(msg), status);
     };
-	}
+}
 
 
