@@ -1,15 +1,18 @@
 package com.desafio.ngbilling.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import com.desafio.ngbilling.exception.TransacaoException;
 import com.desafio.ngbilling.model.Conta;
 import com.desafio.ngbilling.service.Itransacao;
 
+@Service("D")
 public class DebitoTransacaoService implements Itransacao{
 
 	@Override
 	public void transacao(Conta conta, float valor) {
 		float taxa = 0.03f;
-		float valorComTaxa = valor + (valor * taxa);
+        float valorComTaxa = valor * (1 + taxa);
 		
 		if(conta.getSaldo() < valorComTaxa || conta.getSaldo() == 0) {
 			throw new TransacaoException("Saldo insuficiente para transaferencia em Debito");

@@ -30,6 +30,11 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(new ErrorDTO(msg), status);
     };
+    
+    @ExceptionHandler(TransacaoException.class)
+    public ResponseEntity<String> handleSaldoInsuficiente(TransacaoException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
 }
 
 
